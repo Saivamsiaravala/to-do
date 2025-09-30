@@ -1,0 +1,305 @@
+$primary: #2563eb;
+$primary-600: #1e40af;
+$accent: #06b6d4;
+$text: #0f172a;
+$muted: #64748b;
+$bg: #ffffff;
+$card-bg: #f8fafc;
+
+body {
+  padding: 0;
+  margin: 0;
+  main {
+    .app,
+    .edit,
+    .addtask {
+      header {
+        background-color: rgba(3, 78, 162, 1);
+        padding: 2rem 1rem;
+        color: white;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+      }
+    }
+    .app {
+      .list {
+        margin: 1rem 0.5rem 0 0.5rem;
+        .search {
+          display: flex;
+          align-items: center;
+          height: 2rem;
+          padding: 0 1rem;
+          gap: 1rem;
+          border: 1px solid rgba(221, 221, 221, 1);
+          border-radius: 3px;
+          input {
+            border: none;
+            height: 1.5rem;
+            width: 100%;
+          }
+        }
+
+        .tasks {
+          padding: 1rem 0rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          justify-content: center;
+          .in-progress,
+          .pending,
+          .completed {
+            .bar {
+              width: 100%;
+              border: none;
+              border-radius: 3px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              align-content: center;
+              padding: 1rem 1rem;
+              background-color: rgba(243, 246, 249, 1);
+              .title {
+                font-weight: 400;
+                span {
+                  font-weight: 700;
+                  font-style: bold;
+                }
+              }
+              .icon {
+                border: none;
+                color: blue;
+                font-size: 1.5rem;
+                background-color: transparent;
+              }
+            }
+            .tasks-tab {
+              margin-top: 1rem;
+              .task {
+                display: flex;
+                padding: 1rem;
+                gap: 2rem;
+                justify-content: center;
+                .info {
+                  .heading {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    .title {
+                      color: rgba(3, 78, 162, 1);
+                      font-weight: 600;
+                      font-style: SemiBold;
+                      font-size: 14px;
+                      line-height: 100%;
+                      letter-spacing: 0%;
+                    }
+                    .status {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      gap: 0.2rem;
+                      .color {
+                        color: rgba(255, 176, 60, 1);
+                        font-size: 0.8rem;
+                      }
+                    }
+                  }
+                  .description {
+                    max-width: 20rem;
+                    padding: 0.5rem 0 1rem 0;
+                  }
+                  .bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 1rem;
+                    .time {
+                      font-weight: 400;
+                      font-style: Regular;
+                      font-size: 10px;
+                      line-height: 100%;
+                      letter-spacing: 0%;
+                      vertical-align: middle;
+
+                      color: rgba(118, 118, 118, 1);
+                    }
+                    .change {
+                      display: none;
+                      gap: 0.2rem;
+                    }
+                  }
+                }
+                &:hover {
+                  .info {
+                    .bottom {
+                      .change {
+                        display: flex;
+                        button {
+                          cursor: pointer;
+                          font-size: 1.2rem;
+                          background-color: transparent;
+                          border: none;
+                          .edit {
+                            color: blue;
+                          }
+                          .delete {
+                            color: red;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .add {
+        display: flex;
+        justify-content: end;
+        padding-top: 0;
+        button {
+          font-size: 3rem;
+          background-color: transparent;
+          border: none;
+          color: rgba(3, 78, 162, 1);
+          cursor: pointer;
+        }
+      }
+    }
+    .addtask {
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2rem;
+        align-items: center;
+        gap: 1rem;
+        .title-input {
+          border: 1px solid rgba(221, 221, 221, 1);
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 12px;
+          line-height: 100%;
+          height: 2rem;
+          width: 80%;
+          letter-spacing: 0%;
+          &::placeholder {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+          }
+        }
+        .description-input {
+          border: 1px solid rgba(221, 221, 221, 1);
+          height: 5rem;
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          width: 80%;
+          &::placeholder {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+          }
+        }
+        .buttons {
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          .cancel-btn {
+            background-color: transparent;
+            border: 1px solid rgba(3, 78, 162, 1);
+            height: 3rem;
+            border-radius: 5px;
+            width: 5rem;
+            color: rgba(3, 78, 162, 1);
+            cursor: pointer;
+          }
+          .submit-btn {
+            color: white;
+            height: 3rem;
+            border-radius: 5px;
+            width: 5rem;
+            border: none;
+            background-color: rgba(3, 78, 162, 1);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .edit {
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2rem;
+        align-items: center;
+        gap: 1rem;
+        .title-input {
+          border: 1px solid rgba(221, 221, 221, 1);
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 12px;
+          line-height: 100%;
+          height: 2rem;
+          width: 80%;
+          letter-spacing: 0%;
+          &::placeholder {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+          }
+        }
+        .description-input {
+          border: 1px solid rgba(221, 221, 221, 1);
+          height: 5rem;
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          width: 80%;
+          position: relative;
+          &::placeholder {
+            position: absolute;
+            top: 1rem;
+            left: 0.5rem;
+          }
+        }
+        .select-input {
+          width: 80%;
+        }
+        .buttons {
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          .cancel-btn {
+            background-color: transparent;
+            border: 1px solid rgba(3, 78, 162, 1);
+            height: 3rem;
+            border-radius: 5px;
+            width: 5rem;
+            color: rgba(3, 78, 162, 1);
+            cursor: pointer;
+          }
+          .update-btn {
+            color: white;
+            height: 3rem;
+            border-radius: 5px;
+            width: 5rem;
+            border: none;
+            background-color: rgba(3, 78, 162, 1);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

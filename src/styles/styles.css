@@ -1,0 +1,329 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+body main .app header,
+body main .edit header,
+body main .addtask header {
+  background-color: rgb(3, 78, 162);
+  padding: 2rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+body main .app .list {
+  margin: 1rem 0.5rem 0 0.5rem;
+}
+body main .app .list .search {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0 1rem;
+  gap: 1rem;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 3px;
+}
+body main .app .list .search input {
+  border: none;
+  height: 1.5rem;
+  width: 100%;
+}
+body main .app .list .tasks {
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: center;
+}
+body main .app .list .tasks .in-progress .bar,
+body main .app .list .tasks .pending .bar,
+body main .app .list .tasks .completed .bar {
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  padding: 1rem 1rem;
+  background-color: rgb(243, 246, 249);
+}
+body main .app .list .tasks .in-progress .bar .title,
+body main .app .list .tasks .pending .bar .title,
+body main .app .list .tasks .completed .bar .title {
+  font-weight: 400;
+}
+body main .app .list .tasks .in-progress .bar .title span,
+body main .app .list .tasks .pending .bar .title span,
+body main .app .list .tasks .completed .bar .title span {
+  font-weight: 700;
+  font-style: bold;
+}
+body main .app .list .tasks .in-progress .bar .icon,
+body main .app .list .tasks .pending .bar .icon,
+body main .app .list .tasks .completed .bar .icon {
+  border: none;
+  color: blue;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+body main .app .list .tasks .in-progress .tasks-tab,
+body main .app .list .tasks .pending .tasks-tab,
+body main .app .list .tasks .completed .tasks-tab {
+  margin-top: 1rem;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task,
+body main .app .list .tasks .pending .tasks-tab .task,
+body main .app .list .tasks .completed .tasks-tab .task {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+  justify-content: center;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .heading,
+body main .app .list .tasks .pending .tasks-tab .task .info .heading,
+body main .app .list .tasks .completed .tasks-tab .task .info .heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .heading .title,
+body main .app .list .tasks .pending .tasks-tab .task .info .heading .title,
+body main .app .list .tasks .completed .tasks-tab .task .info .heading .title {
+  color: rgb(3, 78, 162);
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .heading .status,
+body main .app .list .tasks .pending .tasks-tab .task .info .heading .status,
+body main .app .list .tasks .completed .tasks-tab .task .info .heading .status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .heading .status .color,
+body main .app .list .tasks .pending .tasks-tab .task .info .heading .status .color,
+body main .app .list .tasks .completed .tasks-tab .task .info .heading .status .color {
+  color: rgb(255, 176, 60);
+  font-size: 0.8rem;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .description,
+body main .app .list .tasks .pending .tasks-tab .task .info .description,
+body main .app .list .tasks .completed .tasks-tab .task .info .description {
+  max-width: 20rem;
+  padding: 0.5rem 0 1rem 0;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .bottom,
+body main .app .list .tasks .pending .tasks-tab .task .info .bottom,
+body main .app .list .tasks .completed .tasks-tab .task .info .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .bottom .time,
+body main .app .list .tasks .pending .tasks-tab .task .info .bottom .time,
+body main .app .list .tasks .completed .tasks-tab .task .info .bottom .time {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: rgb(118, 118, 118);
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info .bottom .change,
+body main .app .list .tasks .pending .tasks-tab .task .info .bottom .change,
+body main .app .list .tasks .completed .tasks-tab .task .info .bottom .change {
+  display: none;
+  gap: 0.2rem;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task:hover .info .bottom .change,
+body main .app .list .tasks .pending .tasks-tab .task:hover .info .bottom .change,
+body main .app .list .tasks .completed .tasks-tab .task:hover .info .bottom .change {
+  display: flex;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task:hover .info .bottom .change button,
+body main .app .list .tasks .pending .tasks-tab .task:hover .info .bottom .change button,
+body main .app .list .tasks .completed .tasks-tab .task:hover .info .bottom .change button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task:hover .info .bottom .change button .edit,
+body main .app .list .tasks .pending .tasks-tab .task:hover .info .bottom .change button .edit,
+body main .app .list .tasks .completed .tasks-tab .task:hover .info .bottom .change button .edit {
+  color: blue;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task:hover .info .bottom .change button .delete,
+body main .app .list .tasks .pending .tasks-tab .task:hover .info .bottom .change button .delete,
+body main .app .list .tasks .completed .tasks-tab .task:hover .info .bottom .change button .delete {
+  color: red;
+}
+body main .app .add {
+  display: flex;
+  justify-content: end;
+  padding-top: 0;
+}
+body main .app .add button {
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  color: rgb(3, 78, 162);
+  cursor: pointer;
+}
+body main .addtask .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+body main .addtask .form .title-input {
+  border: 1px solid rgb(221, 221, 221);
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  height: 2rem;
+  width: 80%;
+  letter-spacing: 0%;
+}
+body main .addtask .form .title-input::-moz-placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+body main .addtask .form .title-input::placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+body main .addtask .form .description-input {
+  border: 1px solid rgb(221, 221, 221);
+  height: 5rem;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 80%;
+}
+body main .addtask .form .description-input::-moz-placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+body main .addtask .form .description-input::placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+body main .addtask .form .buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+body main .addtask .form .buttons .cancel-btn {
+  background-color: transparent;
+  border: 1px solid rgb(3, 78, 162);
+  height: 3rem;
+  border-radius: 5px;
+  width: 5rem;
+  color: rgb(3, 78, 162);
+  cursor: pointer;
+}
+body main .addtask .form .buttons .submit-btn {
+  color: white;
+  height: 3rem;
+  border-radius: 5px;
+  width: 5rem;
+  border: none;
+  background-color: rgb(3, 78, 162);
+  cursor: pointer;
+}
+body main .edit .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+body main .edit .form .title-input {
+  border: 1px solid rgb(221, 221, 221);
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  height: 2rem;
+  width: 80%;
+  letter-spacing: 0%;
+}
+body main .edit .form .title-input::-moz-placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+body main .edit .form .title-input::placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+body main .edit .form .description-input {
+  border: 1px solid rgb(221, 221, 221);
+  height: 5rem;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 80%;
+  position: relative;
+}
+body main .edit .form .description-input::-moz-placeholder {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+}
+body main .edit .form .description-input::placeholder {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+}
+body main .edit .form .select-input {
+  width: 80%;
+}
+body main .edit .form .buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+body main .edit .form .buttons .cancel-btn {
+  background-color: transparent;
+  border: 1px solid rgb(3, 78, 162);
+  height: 3rem;
+  border-radius: 5px;
+  width: 5rem;
+  color: rgb(3, 78, 162);
+  cursor: pointer;
+}
+body main .edit .form .buttons .update-btn {
+  color: white;
+  height: 3rem;
+  border-radius: 5px;
+  width: 5rem;
+  border: none;
+  background-color: rgb(3, 78, 162);
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
