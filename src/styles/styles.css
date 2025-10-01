@@ -88,7 +88,7 @@ body main .app .list .tasks .completed .tasks-tab .task {
 body main .app .list .tasks .in-progress .tasks-tab .task .info,
 body main .app .list .tasks .pending .tasks-tab .task .info,
 body main .app .list .tasks .completed .tasks-tab .task .info {
-  min-width: 15rem;
+  width: 15rem;
   display: flex;
   flex-direction: column;
 }

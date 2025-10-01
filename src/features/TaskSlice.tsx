@@ -8,7 +8,7 @@ const initialState: { tasks: Task[] } = {
       status: "In Progress",
       title: "Lorem Ipsum 1",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      time: "Sep 292025",
+      time: "Sep 29 2025",
     },
     {
       id: 2,

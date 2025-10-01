@@ -23,7 +23,7 @@ const TaskComponent = ({ item }: { item: Task }) => {
 
   return (
     <>
-      <div className="icon">{title.slice(0, 1)}</div>
+      <div className="icon">{title.slice(0, 1).toUpperCase()}</div>
       <div className="info">
         <div className="heading">
           <div className="title">{title}</div>
