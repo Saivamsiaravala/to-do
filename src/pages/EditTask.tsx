@@ -26,7 +26,6 @@ const EditTask = () => {
     e.preventDefault();
     dispatch(editTask(tempTask));
     navigate("/");
-    console.log(tempTask);
   };
 
   const titleHandler = (e: React.ChangeEvent<HTMLInputElement>) => {

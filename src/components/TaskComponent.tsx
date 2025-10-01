@@ -3,6 +3,8 @@ import type { Task } from "./Home";
 import { TbPencil } from "react-icons/tb";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import { deleteTask } from "../features/TaskSlice";
+import { useAppDispatch } from "../hooks";
 
 export const statusColors: {
   Pending: string;
@@ -16,9 +18,14 @@ export const statusColors: {
 
 const TaskComponent = ({ item }: { item: Task }) => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const { description, title, status, time, id } = item;
   const handleEditButton = (urlId: number) => {
     navigate(`edittask/${urlId}`);
+  };
+
+  const deleteHandler = (id: number) => {
+    dispatch(deleteTask(id));
   };
 
   return (
@@ -42,7 +49,7 @@ const TaskComponent = ({ item }: { item: Task }) => {
             <button onClick={() => handleEditButton(id)}>
               <TbPencil className="edit" />
             </button>
-            <button>
+            <button onClick={() => deleteHandler(id)}>
               <RiDeleteBinLine className="delete" />
             </button>
           </div>

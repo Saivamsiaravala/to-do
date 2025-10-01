@@ -7,11 +7,11 @@ import type { Task } from "../components/Home";
 const AddTask = () => {
   const { tasks } = useAppSelector((store) => store.tasks);
   const [newTask, setNewTask] = useState<Task>({
-    id: tasks.length,
-    time: "",
+    id: tasks[tasks.length - 1].id + 1,
     status: "Pending",
     title: "",
     description: "",
+    time: "",
   });
   const navigate = useNavigate();
   const dispatch = useAppDispatch();

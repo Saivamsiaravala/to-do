@@ -41,7 +41,9 @@ const TaskSlice = createSlice({
     addTask: (state, action: PayloadAction<Task>) => {
       state.tasks.push(action.payload);
     },
-    deleteTask: () => {},
+    deleteTask: (state, action: PayloadAction<number>) => {
+      state.tasks = state.tasks.filter((task) => task.id !== action.payload);
+    },
     editTask: (state, action: PayloadAction<Task>) => {
       state.tasks = state.tasks.filter((task) => task.id !== action.payload.id);
       state.tasks.push(action.payload);
