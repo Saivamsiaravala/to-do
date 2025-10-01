@@ -75,6 +75,7 @@ body main .app .list .tasks .in-progress .tasks-tab,
 body main .app .list .tasks .pending .tasks-tab,
 body main .app .list .tasks .completed .tasks-tab {
   margin-top: 1rem;
+  width: 100%;
 }
 body main .app .list .tasks .in-progress .tasks-tab .task,
 body main .app .list .tasks .pending .tasks-tab .task,
@@ -83,6 +84,13 @@ body main .app .list .tasks .completed .tasks-tab .task {
   padding: 1rem;
   gap: 2rem;
   justify-content: center;
+}
+body main .app .list .tasks .in-progress .tasks-tab .task .info,
+body main .app .list .tasks .pending .tasks-tab .task .info,
+body main .app .list .tasks .completed .tasks-tab .task .info {
+  min-width: 15rem;
+  display: flex;
+  flex-direction: column;
 }
 body main .app .list .tasks .in-progress .tasks-tab .task .info .heading,
 body main .app .list .tasks .pending .tasks-tab .task .info .heading,
@@ -283,23 +291,8 @@ body main .edit .form .title-input::placeholder {
 body main .edit .form .description-input {
   border: 1px solid rgb(221, 221, 221);
   height: 5rem;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  padding: 0;
   width: 80%;
-  position: relative;
-}
-body main .edit .form .description-input::-moz-placeholder {
-  position: absolute;
-  top: 1rem;
-  left: 0.5rem;
-}
-body main .edit .form .description-input::placeholder {
-  position: absolute;
-  top: 1rem;
-  left: 0.5rem;
 }
 body main .edit .form .select-input {
   width: 80%;

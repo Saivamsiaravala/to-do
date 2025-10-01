@@ -78,12 +78,17 @@ body {
             }
             .tasks-tab {
               margin-top: 1rem;
+              width: 100%;
+
               .task {
                 display: flex;
                 padding: 1rem;
                 gap: 2rem;
                 justify-content: center;
                 .info {
+                  min-width: 15rem;
+                  display: flex;
+                  flex-direction: column;
                   .heading {
                     display: flex;
                     justify-content: space-between;
@@ -260,18 +265,8 @@ body {
         .description-input {
           border: 1px solid rgba(221, 221, 221, 1);
           height: 5rem;
-          font-weight: 400;
-          font-style: Regular;
-          font-size: 12px;
-          line-height: 100%;
-          letter-spacing: 0%;
+          padding: 0;
           width: 80%;
-          position: relative;
-          &::placeholder {
-            position: absolute;
-            top: 1rem;
-            left: 0.5rem;
-          }
         }
         .select-input {
           width: 80%;

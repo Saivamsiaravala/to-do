@@ -18,7 +18,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
-      <Route path="edittask/:id" element={<EditTask />} />
+      <Route path="edittask/:tempId" element={<EditTask />} />
       <Route path="addtask" element={<AddTask />} />
     </Route>
   )

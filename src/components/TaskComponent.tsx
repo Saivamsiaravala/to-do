@@ -17,8 +17,8 @@ export const statusColors: {
 const TaskComponent = ({ item }: { item: Task }) => {
   const navigate = useNavigate();
   const { description, title, status, time, id } = item;
-  const handleEditButton = (id: number) => {
-    navigate(`edittask/${id}`);
+  const handleEditButton = (urlId: number) => {
+    navigate(`edittask/${urlId}`);
   };
 
   return (
